@@ -382,7 +382,9 @@ function createTable() {
     var output = "";
 
     // echo comment wrapper if any
-    output += commentbefore + "\n";
+    if (commentbefore) {
+        output += commentbefore + "\n";
+    }
 
     // output the top most row
     // Ex: +---+---+
