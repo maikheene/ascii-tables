@@ -322,6 +322,20 @@ function createTable() {
         hdV = "||"; hdH = "";
         spV = "| "; spH = "";
         break;
+    case "gherkin":
+        // gherkin
+        hasTopLine = false;
+        hasBottomLine = false;
+        autoFormat = false;
+        hasHeaderSeparators = false;
+
+        cTL = ""; cTM = ""; cTR = "";
+        cML = ""; cMM = ""; cMR = "";
+        cBL = ""; cBM = ""; cBR = "";
+
+        hdV = "| "; hdH = "";
+        spV = "| "; spH = "";
+        break;
     case "mediawiki":
         // mediawiki
         hasLineSeparators = true;
@@ -619,7 +633,7 @@ function _repeat(str, num) {
 
 function copyOutputToClipboard() {
     const output = $('#output').val();
-    
+
     if (navigator.clipboard) {
         navigator.clipboard.writeText(output).catch(e => console.error('Cannot write to clipboard', e));
     } else {

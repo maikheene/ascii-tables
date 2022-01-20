@@ -3,14 +3,22 @@
 	margin: 0px;
 }
 
-header a, footer a {
+
+
+footer a {
     color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #a4c1b1;
+}
+
+header a:hover {
     text-decoration: none;
 }
 
-header a:hover, footer a:hover {
-	color: #1F669C;
-	text-decoration: none;
+footer a:hover {
+	color: black;
+	text-decoration: underline;
+    text-decoration-color: #a4c1b1;
 }
 
 h1 span {
@@ -76,7 +84,11 @@ footer {
 }
 
 header, footer {
-    background-color: #3CC255 !important;
+    background-color: #626262 !important;
+}
+
+footer {
+    color: white;
 }
 
 abbr[title] {
@@ -92,4 +104,17 @@ textarea, .well {
 {
 	background-color: inherit;
 	margin: 0px;
+}
+
+.btn-primary {
+    color: black;
+    font-weight: bold;
+    background-color: #A4C1B1;
+    border-color: #D9E8D4;
+}
+
+.description {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #A4C1B1;
 }

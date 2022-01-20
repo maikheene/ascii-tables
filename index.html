@@ -20,10 +20,7 @@
     <div class="row">
       <header class="jumbotron">
         <div class="row">
-          <div class="col-xs-1 col-xs-offset-1 text-right">
-            <h1><a href=""><i id="icon" class="fa fa-table"></i><span id="title">ASCII Table Generator</span></a></h1>
-          </div>
-          <div class="col-xs-10">
+          <div class="col-xs-11 col-xs-offset-1">
             <h1><a href=""><pre>    _             _ _   _____     _     _
    / \   ___  ___(_|_) |_   _|_ _| |__ | | ___
   / _ \ / __|/ __| | |   | |/ _` | '_ \| |/ _ \
@@ -34,7 +31,7 @@
 
         <div class="row">
           <div class="col-xs-11 col-xs-offset-1">
-            <p>Quickly format ASCII table. Great for <span>source code comments</span> and <span>Github Markdown</span>!</p>
+            <p class="description">Copy & Paste the Excel content to the Input box to convert it to an Ascii Table</span>!</p>
           </div>
         </div>
       </header>
@@ -48,10 +45,10 @@
       </div>
       <div class="col-xs-9">
         <div class="row">
-          <textarea class="form-control fixed-width " rows="5" wrap="off" id="input" onchange="createTable()" onkeyup="createTable()">Col1	Col2	Col3	Numeric Column
-Value 1	Value 2	123	10.0
-Separate	cols    with a tab or 4 spaces	-2,027.1
-This is a row with only one cell</textarea>
+          <textarea class="form-control fixed-width " rows="15" wrap="off" id="input" onchange="createTable()" onkeyup="createTable()">start	eat	left
+12	5	7
+20	5	15
+</textarea>
         </div>
       </div>
     </div>
@@ -73,6 +70,7 @@ This is a row with only one cell</textarea>
           <div class="row">
             <label for="style" class="control-label" title="Select the output format of the table">Output Style:
 				<select id="style" onchange="createTable()">
+                    <option value="gherkin">Gherkin</option>
 					<option value="mysql">ASCII (mysql style)</option>
 					<option value="separated">ASCII (separated)</option>
 					<option value="compact">ASCII (compact)</option>
@@ -144,7 +142,7 @@ This is a row with only one cell</textarea>
       </div>
       <div class="col-xs-9">
         <div id="outputText" class="row">
-          <textarea id="output" class="form-control fixed-width" rows="8" wrap="off"></textarea>
+          <textarea id="output" class="form-control fixed-width" rows="15" wrap="off"></textarea>
         </div>
       </div>
     </div>
@@ -152,7 +150,7 @@ This is a row with only one cell</textarea>
     <div id="outputTbl" class="row"></div>
     <div class="row">
       <footer>
-        Idea and code base by <a href="http://www.sensefulsolutions.com/2010/10/format-text-as-table.html">Senseful Solutions</a>. Forked by <a href="https://github.com/ozh">Ozh</a> to tweak a few stuff and to add <abbr title="Github Flavored Markdown">GFM</abbr>.
+        Idea and code base by <a href="http://www.sensefulsolutions.com/2010/10/format-text-as-table.html">Senseful Solutions</a>. Forked by <a href="https://github.com/ozh">Ozh</a> to tweak a few stuff and to add GFM.
         See on <a href="https://github.com/ozh/ascii-tables">Github</a>.
       </footer>
     </div>
